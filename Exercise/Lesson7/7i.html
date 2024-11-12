@@ -13,7 +13,11 @@
 
     function convertLength(length, from, to){
 
-        
+        if(from !== 'Feats' && from !== 'Km' && from !== 'Miles'){
+          return `invalit unit: ${from}`;
+        }else if(to !== 'Feats' && to !== 'Km' && to !== 'Miles'){
+          return `invalid unit: ${to}`;
+        }
 
         if(from === 'Km' && to === 'Miles'){
           return `${length / 1.6} miles`;
