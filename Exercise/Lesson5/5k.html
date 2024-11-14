@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Variables</title>
+
+  </head>
+
+  <body>
+    <button onclick=" 
+      console.log(`cartQuntity: ${cartQuntity}`);"
+    >Show quantity</button>
+
+    <button onclick="
+      cartQuntity++;
+      console.log(`cartQuntity: ${cartQuntity}`);"
+    >Add to Cart</button>
+
+    <button onclick="
+      cartQuntity += 2;
+      console.log(`cartQuntity: ${cartQuntity}`);
+    ">+2</button>
+
+    <button onclick="
+      cartQuntity += 3;
+      console.log(`cartQuntity: ${cartQuntity}`);"
+    >+3</button>
+
+    <button onclick="
+      cartQuntity += 4;
+      console.log(`cartQuntity: ${cartQuntity}`);"
+    >+4</button>
+
+    <button onclick="
+      cartQuntity += 5;
+      console.log(`cartQuntity: ${cartQuntity}`);"
+    >+5</button>
+
+    <button onclick="
+      cartQuntity -= 1;
+      console.log(`cartQuntity: ${cartQuntity}`);
+    ">Remove from cart</button>
+
+    <button onclick="
+    cartQuntity -= 2;
+    console.log(`cartQuntity: ${cartQuntity}`);
+    ">-2</button>
+
+    <button onclick="
+      cartQuntity -= 3;
+      console.log(`cartQuntity: ${cartQuntity}`);
+    ">-3</button>
+
+
+    <button onclick="
+      cartQuntity = 0;
+      console.log('Cart was reset.');
+      console.log(`cartQuntity: ${cartQuntity}`);"
+    >Reset Cart</button>
+
+  <script>
+    let cartQuntity = 0;
+  </script>
+  </body>
+
+</html>
