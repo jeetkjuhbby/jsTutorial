@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    
+  <script>
+
+    function convertLength(length, from ,to){
+      if(from === 'km' && to === 'miles'){
+        return `${length / 1.6} miles`;
+      }else if(from === 'miles' && to === 'km'){
+        return `${length * 1.6} km`;
+      }else if(from === to){
+        return `${length} ${to}`;
+      }
+    }
+
+    console.log(convertLength(1,'miles','km'));
+    console.log(convertLength(1,'km','miles'));
+    console.log(convertLength(1,'km','km'));
+    console.log(convertLength(1,'miles','miles'));
+
+  
+   
+  </script>  
+  
+  </body>
+</html>
