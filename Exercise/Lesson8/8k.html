@@ -1,0 +1,47 @@
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      playGame('heads')
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails')
+    ">tails</button> 
+    
+    <button onclick="
+    cscore.wins = 0;
+    cscore.lossess = 0;
+    localStorage.removeItem('cscore');
+    ">Reset Score</button>
+
+
+  <script>
+
+    const cscore= JSON.parse(localStorage.getItem('cscore')) ||{
+      wins: 0,
+      lossess: 0,
+    };
+
+   function playGame(guess){
+    const randomNumber = Math.random();
+    const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+    console.log(result === guess ? 'You win!' : 'You lose!');
+
+    if(result === guess){
+      cscore.wins += 1;
+    }else{
+      cscore.lossess +=1;
+    }
+    localStorage.setItem('cscore',JSON.stringify(cscore));
+    console.log(cscore)
+
+   }
+
+  
+
+  </script>  
+  
+  </body>
+</html>

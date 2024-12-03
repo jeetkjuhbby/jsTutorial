@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+  <script>
+    const product1 = {
+      name: 'shirt',
+      price: 799
+    };
+
+    const product2 = {
+      name: 'basketball',
+      price: 2095
+    };
+
+    const strProduct1= JSON.stringify(product1);
+    const strProduct2= JSON.stringify(product2);
+
+    function isSameProduct(product1,product2){
+      if(strProduct1 === strProduct2){
+        return true;
+      }else{
+        return false;
+      }
+    }
+    
+    console.log(isSameProduct(product1,product2));
+  </script> 
+  </body>
+</html>

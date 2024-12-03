@@ -1,0 +1,38 @@
+<html>
+  <head></head>
+  <body>
+    <button onclick="
+      playGame('heads')
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails')
+    ">tails</button>   
+  <script>
+
+    const score = {
+      wins: 0,
+      lossess: 0
+    };
+
+   function playGame(guess){
+    const randomNumber = Math.random();
+    const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+    console.log(result === guess ? 'You win!' : 'You lose!');
+
+    if(result === guess){
+      score.wins += 1;
+    }else{
+      score.lossess +=1;
+    }
+
+    console.log(score)
+   }
+
+   console.log(score)
+
+  </script>  
+  
+  </body>
+</html>
